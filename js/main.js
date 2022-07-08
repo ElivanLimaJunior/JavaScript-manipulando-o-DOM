@@ -1,12 +1,12 @@
-const robotron = document.querySelector('#robotron')
+const subtrair = document.querySelector('#subtrair')
+const somar = document.querySelector('#somar')
+const braco = document.querySelector('#braco')
 
-robotron.addEventListener("click", () => {
-    console.log('Oi')
+somar.addEventListener("click", (evento) => {
+    braco.value = parseInt(braco.value) + 1
 })
 
-function dizoi(nome) { // colocamos nome dentro do parametros e no console chamamos esse nome, mas de onde vem esse nome ?
-    console.log('oi ' + nome)
-    console.log('Bem-vindo ao robotron')
-}
+subtrair.addEventListener("click", (evento) => {
+    braco.value = parseInt(braco.value) - 1
+})
 
-dizoi("pedro") // esse nome vem quando chamamos a função, ali nós definimos qual seria o valor do parametro nome.
