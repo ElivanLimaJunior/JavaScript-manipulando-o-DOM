@@ -7,17 +7,18 @@ const controle = document.querySelectorAll(".controle-ajuste")
 
 controle.forEach( (elemento) => {
     elemento.addEventListener("click", (evento) => {
-        // Primeiro usamos o console.log(evento) para analisar o target do click. depois disso usamos o "evento.target" para pegar exatamento o botão em que estamos clicando.
-        console.log(evento.target) 
+        manipulaDados(evento.target.textContent)
     })
 })
 
-somar.addEventListener("click", () => {manipulaDados("somar")})
+// Não é + necessario essa parte do código pois o código acima fara o mesmo porém para todos.
 
-subtrair.addEventListener("click", () => {manipulaDados("subtrair")})
+// somar.addEventListener("click", () => {manipulaDados("somar")})
+
+// subtrair.addEventListener("click", () => {manipulaDados("subtrair")})
 
 function manipulaDados (operacao) {
-    if(operacao === "subtrair") {
+    if(operacao === "-") {
         braco.value = parseInt(braco.value) - 1
     } else {
         braco.value = parseInt(braco.value) + 1
